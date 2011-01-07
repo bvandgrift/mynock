@@ -49,3 +49,16 @@ TEMPLATE
   end
 end
 
+task :compile do
+  puts "Compiling content."
+  sh "nanoc3 co"
+end
+
+task :sync do
+  puts "Syncing site to production."
+  sh "rsync -rcv --delete output/ deploy-user@host:directory"
+end
+
+task :deploy => [:compile, :sync]
+
+task :default => :deploy

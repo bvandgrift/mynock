@@ -1,5 +1,6 @@
 source :gemcutter
 
+gem "il8n"
 gem "nanoc"
 gem "rack"
 gem "rake"
