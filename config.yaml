@@ -12,28 +12,28 @@ data_sources:
 #   % rake deploy:rsync
 deploy:
   default:
-    dst: "mgutz_com:www/nanoc3_blog"
+    dst: "server:basedir/subdir"
     options: ['-ave ssh', '--exclude=.DS_Store', '--exclude=*~']
 
 # domain to which this site is deployed
-base_url: http://nanoc-blog-kit.mgutz.com
+base_url: http://some-server.com
 
 google_analytics:
-  domain: mgutz.com
-  site_id: UA-9655468-1
+  domain: some-server.com
+  site_id: UA-123456789-1
 
 # currently used by logo
-site_name: nanoc3_blog
+site_name: mynock
 
 # number of full featured posts to display on front
-featured_count: 0
+featured_count: 1
 
 # number of excerpted posts to display on front
-excerpt_count: 6
+excerpt_count: 5
 
 # number of other articles to reference at bottom of each article
 other_articles_max: 3
 
 # DISQUS Site Shortname. Comment out to disable.
-disqus_shortname: nanoc3-blog
+disqus_shortname: mynock
 

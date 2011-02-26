@@ -6,6 +6,6 @@
     %a(href="#{url}" title="Full article" class="permalink")= "&laquo; #{item[:title]}"
   .body
     %p
-      = item[:excerpt] || "!!! Missing excerpt metadata for <code>#{item[:file].path}</code>"
+      = item[:excerpt] || "!!! Missing excerpt metadata for <code>#{item[:content_filename]}</code>"
   -# = render('_meta', :item => item)
     

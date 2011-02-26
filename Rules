@@ -9,8 +9,20 @@ preprocess do
   add_update_item_attributes
 end
 
-compile '/assets/css/*/' do
+# static assets:
+assets = %w{images stylesheets javascripts}
+assets.each do |asset|
+  compile "/#{asset}/*" do
+    # do nothing
+  end
+end
+
+compile '/sass/*/' do
   filter :sass
+end
+
+compile '/sass/x/*' do
+  # nothing for sass extension files.
 end
 
 compile '*' do
@@ -34,8 +46,18 @@ compile '*' do
   layout 'default' unless item[:layout] == "none"
 end
 
-route '/assets/css/*/' do
+route '/sass/*/' do
   item.identifier.chop + '.css'
+end
+
+route '/sass/x/*' do
+  # nothing for sass extension files.
+end
+
+assets.each do |asset|
+  route "/#{asset}/*" do
+    item.identifier.chop + item[:extension]
+  end
 end
 
 route '*' do

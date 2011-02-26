@@ -1,5 +1,5 @@
 ---
-title: Getting Started With nanoc3_blog 
+title: Getting Started With mynock 
 kind: article
 tags: [haml, nanoc3, sass]
 created_at: 2010/01/15
@@ -7,6 +7,8 @@ excerpt: Get started with nanoc3_blog
 keywords: nanoc blog example, nanoc3 blog example
 _:
 ---
+
+(this is shamelessly copied from nanoc3_blog.)
 
 ## Prerequisites
 
@@ -17,7 +19,7 @@ Know how to use `terminal, Ruby, HAML, SASS` and `Markdown`.
 From the command line
 
     % gem install bundler
-    % git clone git://github.com/mgutz/nanoc3_blog.git your_blog
+    % git clone git://github.com/bvandgrift/mynock.git your_blog
     % cd your_blog
     % bundle install
 

@@ -5,3 +5,5 @@ tmp/*
 .DS_Store
 .bundle
 output.diff
+Gemfile.lock
+file_changes.yaml

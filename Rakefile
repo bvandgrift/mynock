@@ -6,7 +6,6 @@ namespace :create do
 
   desc "Creates a new article"
   task :article do
-    $KCODE = 'UTF8'
     require 'active_support/core_ext'
     require 'active_support/multibyte'
     @ymd = Time.now.to_s(:db).split(' ')[0]
